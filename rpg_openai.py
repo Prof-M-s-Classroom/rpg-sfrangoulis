@@ -7,7 +7,7 @@ openai.api_key = "sk-proj-EP-oeajlg1LB2JXHSQc_Rr3XhTxi3tZOFPW5xpsXcDL-oIR3sRD8JC
 def generate_rpg_story():
     client = openai.OpenAI(api_key=openai.api_key)
 
-    prompt = "Create an RPG story about a plane breaking down in the pacific ocean with main charachter ending up on an island with two decisions at each step. Format the decisions as: event_number|description|left_event|right_event" # TODO: Prompt engineer to get the exact story format you want here.
+    prompt = "Create an RPG story about a plane breaking down in the pacific ocean with main charachter ending up on a desert island with two decisions at each step. There must be at least 8 decisions, at least one shared decision and at least 5 levels of decisions before the game ends. Format the decisions as: event_number|description|left_event|right_event" # TODO: Prompt engineer to get the exact story format you want here.
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
